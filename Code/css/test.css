@@ -1,0 +1,493 @@
+body, html {
+    margin: 0;
+}
+
+a {
+    color: #924A17;
+    font-weight: bold;
+    font-size: 0.8em;
+    letter-spacing: 0.3em;
+    font-family:'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+header {
+    padding: 2em;
+}
+
+body{
+    height: 100%;
+    background: linear-gradient(90deg, white 50%, aliceblue 50%);
+}
+
+.logo {
+    color:black;
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center;
+    margin: -0;
+    padding-left: 1.618em;
+    font-size: 50px;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    z-index: +1;
+}
+
+
+
+
+
+.menu-btn {
+    width: 22px;
+    float: right;
+    cursor: pointer;
+}
+
+nav {
+    position: relative;
+    background:#FCF8F5;
+    padding: 2em;
+    width: calc(100% - 4em);
+    height: calc(100vh - 4em);
+    display: none;
+    transform: scaleX(0);
+    transform-origin: right;
+    overflow-y: auto;
+}
+
+.exit-btn {
+    width: 23px;
+    float: right;
+    cursor: pointer;
+    opacity: 0;
+}
+
+ul { 
+    list-style: none;
+    margin: 10% auto 0 auto;
+    padding: 0%;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    width: 80%;
+}
+
+span {
+    color: grey;
+    display: block;
+    font-size: .75em;
+    margin-top: 20px;
+}
+
+.show-menu {
+    display: block;
+    animation: slide-menu 1s ease-in forwards;
+}
+.exit-btn {
+    animation: show-x 1s 1s forwards;
+}
+
+li {
+    opacity: 0;
+}
+
+li:nth-of-type(1) {
+    animation: menu-item-anim .6s forwards 1s ease-in-out;
+}
+li:nth-of-type(2) {
+    animation: menu-item-anim .6s forwards 1.2s ease-in-out;
+}
+li:nth-of-type(3) {
+    animation: menu-item-anim .6s forwards 1.4s ease-in-out;
+}
+li:nth-of-type(4) {
+    animation: menu-item-anim .6s forwards 1.6s ease-in-out;
+}
+li:nth-of-type(5) {
+    animation: menu-item-anim .6s forwards 1.8s ease-in-out;
+}
+li:nth-of-type(6) {
+    animation: menu-item-anim .6s forwards 2s ease-in-out;
+}
+
+@keyframes slide-menu {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes show-x {
+        from {
+           opacity: 0;
+        }
+        to {
+           opacity: 1;
+        }
+}
+
+@keyframes menu-item-anim {
+    from {
+        transform: translateY(60%);
+        opacity: (0);
+    }
+  to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+img:nth-of-type(1) {
+    animation: show-x 3s forwards;
+}
+
+
+
+
+.font3 { 
+    color:black;
+    font-family: 'Sen', sans-serif;
+    float: right;
+    margin: 0;
+    padding-right: 2em;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+}
+
+
+
+
+.vertical_right {
+    position: sticky;
+    top: 250px;
+    font-family: 'Sen', sans-serif;
+    letter-spacing: 1em;
+    font-size: 6px;
+    padding: 2em;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    float: right;
+    z-index: -1;
+}
+.vertical_left {
+    position: sticky;
+    top: 250px;
+    font-family: 'Sen', sans-serif;
+    letter-spacing: 1em;
+    font-size: 6px;
+    padding: 2em;
+  writing-mode: vertical-lr;
+    text-orientation: mixed;
+    float: left;
+    z-index: -1;
+}
+._zindex {
+    z-index: +3;
+}
+
+
+
+
+
+.mosaic {
+    display: grid;
+    grid-template-columns: 5% 5fr 3fr 0.5fr;
+    grid-template-rows: 0.5fr 0.5fr 1.2fr 0.35fr 0.35fr 1fr;
+    height: 800px;
+}
+.mosaic--main {
+        grid-area: 3/2/4/3;
+}
+.font1 { 
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: -0.04em;
+    font-size: 90px;
+    display: inline;
+    white-space: nowrap;
+}
+.font1_italic { 
+    color: black;
+    font-family: 'Cormorant Garamond', serif;
+    margin: 0;
+    font-style: italic;
+    font-size: 90px;
+    display: inline;
+    white-space: nowrap;
+}
+.font4 { 
+    color:black;
+    font-family: 'Sen', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color:black;
+    cursor: pointer;
+    z-index: -1;
+}
+.mosaic--sub {
+    grid-area: 4/2/5/3;
+  }
+
+.mosaic--button {
+    grid-area: 5/2/6/3;
+  }
+
+.mosaic--image {
+grid-area: 2/3/6/4;
+}
+
+.frontonwomen {
+    width: 30em;
+    height: auto;
+    z-index: -1;
+}
+
+
+
+
+
+
+
+
+.mosaic2 {
+    display: grid;
+    grid-template-columns: 5% 2fr 1fr 1.5fr 1fr 3fr 1fr 0.5fr;
+    grid-template-rows: 0.3fr 0.5fr 0.5fr 0.5fr 1fr 1fr;
+    height: 900px;
+}
+.mosaic--seafoam{
+    grid-area: 2/2/6/3;
+}
+.seafoam {
+    width: 26em;
+    height: auto;
+}
+.mosaic--about{
+    grid-area: 3/5/4/7;
+}
+.mosaic--earrings{
+    grid-area: 5/4/8/6;
+}
+.earrings1 {
+    width: 22em;
+    height: auto;
+    z-index: -1;
+}
+.mosaic--sociallinks {
+    grid-area: 6/7/7/8;
+}
+.social_links {
+    width: 2em;
+    height: auto;
+    z-index: 1;
+    cursor: pointer;
+}
+.font8 {
+    color:black;
+    font-family: 'Sen', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    line-height: 1.8em;
+    display: block;
+    color:black;
+    cursor: pointer;
+    z-index: -1;
+}
+
+
+
+
+
+
+
+.mosaic--container {
+    position: relative;
+    top: -100px;
+    z-index: -2;
+    width: 90%;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+.mosaic3 {
+    display: grid;
+    grid-template-columns: 5% 5fr 3fr 0.5fr;
+    grid-template-rows: 1fr 2fr 1fr 0.5fr 1fr;
+    height: 800px;
+}
+.mosaic--press{
+    grid-area: 2/2/4/3;
+}
+.mosaic--womendown {
+    grid-area: 2/3/4/4;
+}
+.womendown {
+    width: 25em;
+    height: auto;
+    z-index: -1;
+}
+.list_title {
+    font-family: 'Sen', sans-serif;
+    font-size: 11px;
+    font-weight: bolder;
+    letter-spacing: 0.3em;
+    color:black;
+    z-index: -1;
+}
+.features_list {
+    border-left: 1px solid #555353;
+    padding-left: 0.8em;
+    text-transform: capitalize;
+   list-style-type: none;
+    color: #924A17;
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: -0.01em;
+    font-size: 59px;
+    line-height: 0.8;
+    position: relative;
+    z-index: -1
+
+}
+
+
+
+
+
+
+.font6 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    line-height: 1.2em;
+    letter-spacing: 0.001em;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    background-color:#1F1F1F;
+    padding:200px;
+   margin: 0em;
+}
+.padding0 {
+    padding: 0;
+    margin: 0;
+}
+.review {
+    font-family:'sen',sans-serif;
+    font-size: 12px;
+    color:white;
+    font-style: normal;
+    letter-spacing: 0.3em;
+}
+
+
+
+
+
+
+
+
+.mosaic--container2 {
+    position: relative;
+    z-index: -2;
+    top: -0px;
+    width: 100%;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   background-color: #FCF8F5;
+}
+
+.mosaic4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr 1.5fr 0.5fr 1fr;
+    grid-template-rows: 1.5fr 3.8fr 0.7fr 1.5fr;
+    height: 600px;
+}
+.mosaic--earrings2{
+    grid-area: 2/2/5/3;
+}
+
+.earrings2 {
+    width: 15em;
+    height: auto;
+    z-index: -1;
+}
+
+.mosaic--subscribe{
+    grid-area: 2/4/3/6;
+}
+
+.font10 { 
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: -0.04em;
+    font-size: 50px;
+    display: inline;
+    white-space: nowrap;
+}
+
+.form_zindex {
+    z-index: +1;
+}
+
+.mosaic--form{
+    grid-area: 3/4/4/5;
+}
+
+.form--container {
+    padding-top: 9px;
+    background-color: transparent;
+    box-shadow: none;
+}
+.input-1 {
+    width: 120px;
+    height: 20px;
+   }
+   .input-2 {
+    width: 200px;
+    height: 20px;
+   }
+
+.mosaic--subscribe-button{
+    grid-area: 3/5/4/6;
+}
+.button {
+    cursor: pointer;
+    color:white;
+    background-color: #272727;
+    border-color: #272727;
+    font-family: 'Sen', sans-serif;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 0.35em;
+    padding: 14px;
+    z-index: +5;
+}
+
+
+
+
+
+
+footer {
+    z-index: -1;
+    position: relative;
+    font-family:'sen',sans-serif;
+    font-size: 10px;
+    color:#924A17;
+    font-style: normal;
+    letter-spacing: 0.3em;
+    padding-top: 4em;
+    height: 150px;
+    background-color:#DAC2B8;
+    text-align: center;
+  }
+
+.footer--span {
+    z-index: -1;
+    position: relative;
+    font-family:'sen',sans-serif;
+    font-size: 10px;
+    color:#924A17;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
